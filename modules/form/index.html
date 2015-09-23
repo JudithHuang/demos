@@ -1,0 +1,30 @@
+<html ng-app="app">
+<head>
+  <title>angular form</title>
+  <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body ng-controller="index">
+  this is angular form
+
+  <form name="myForm" ng-submit="send()">
+    <input type="text"
+      name="input"
+      ng-model="user.username"
+      required/>
+    <span class="error"
+      ng-show="myForm.input.$error.required">Required!</span><br>
+    <!-- <tt>userType = {{userType}}</tt><br>
+    <tt>myForm.input.$valid = {{myForm.input.$valid}}</tt><br>
+    <tt>myForm.input.$error = {{myForm.input.$error}}</tt><br>
+    <tt>myForm.$valid = {{myForm.$valid}}</tt><br>
+    <tt>myForm.$error.required = {{!!myForm.$error.required}}</tt><br> -->
+  </form>
+  <pre>user.name = <span ng-bind="user.username()"></span></pre>
+
+  <!-- directive -->
+  <!-- js -->
+  <script src="../../jquery.js"></script>
+  <script src="../../angular.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>

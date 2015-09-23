@@ -1,0 +1,26 @@
+<html ng-app="app">
+  <head>
+    <title>material test</title>
+    <link rel="stylesheet" type="text/css" href="angular-material.css">
+    <link rel="stylesheet" type="text/css" href="index.css">
+  </head>
+  <body ng-controller="index as ctrl">
+    <md-content>
+      <!-- autocomplete -->
+      <md-autocomplete
+        md-selected-item="ctrl.selectedItem"
+        md-search-text="ctrl.searchText"
+        md-items="item in ctrl.querySearch(ctrl.searchText)"
+        md-item-text="item.display"
+        md-min-length="0"
+        placeholder="What is your favorite US state?">
+        <span md-highlight-text="searchText">{{item.display}}</span>
+      </md-autocomplete>
+    </md-content>
+  <!-- js -->
+  <script src="../jquery.js"></script>
+  <script src="../angular.js"></script>
+  <script src="angular-material.js"></script>
+  <script src="index.js"></script>
+  </body>
+</html>

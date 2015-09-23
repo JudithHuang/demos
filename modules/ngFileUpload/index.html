@@ -1,0 +1,20 @@
+<html ng-app="app">
+  <head>
+    <title>demo</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+  </head>
+  <body ng-controller="index">
+    this is demo
+    <form>
+      <input type="file" ng-file-select="selectFile($files)"
+        ng-modle="files"
+        multiple="true">
+      </input>
+    </form>
+    <!-- js -->
+    <script src="../../jquery.js"></script>
+    <script src="../../angular.js"></script>
+    <script src="angular-file-upload.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>

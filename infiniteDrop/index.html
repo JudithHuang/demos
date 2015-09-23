@@ -1,0 +1,22 @@
+<html ng-app="app">
+  <head>
+    <title>demo</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+  </head>
+  <body ng-controller="index">
+<!--     <div ng-repeat="user in data">
+      <div ng-bind="user.id"></div>
+      <div ng-bind="user.name"></div>
+    </div> -->
+    <infinite-drop load-data="loadData()">
+      <div ng-repeat="user in data">
+        <div ng-bind="user.id"></div>
+        <div ng-bind="user.name"></div>
+      </div>
+    </infinite-drop>
+    <!-- js -->
+    <script src="../jquery.js"></script>
+    <script src="../angular.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>

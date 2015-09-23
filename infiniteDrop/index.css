@@ -1,0 +1,17 @@
+body {
+  outline: 1px solid;
+}
+
+.infinite-wraper {
+  width: 50%;
+  height: 50%;
+  border: 1px solid;
+  overflow-y: auto;
+}
+
+.infinite-content {
+  width: 100%;
+  height: 400px;
+  outline: 1px solid red;
+  background-color: pink;
+}
