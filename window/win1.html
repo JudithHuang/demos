@@ -1,0 +1,31 @@
+<html>
+<head>
+  <title>win1</title>
+</head>
+<body>
+<button id="btn">open Window2</button>
+
+<script src="../jquery.js"></script>
+
+<script type="text/javascript">
+  $('#btn').click(function () {
+    var iframeWin = window.open('win2.html');
+
+    var myMessage = {
+      'name': 'judith',
+      'age': 12
+    };
+    console.log(myMessage);
+    var interval = setInterval(function(){
+      console.log('onloading');
+      if (iframeWin.status === 'onload') {
+        iframeWin.postMessage(JSON.stringify(myMessage), "http://www.win.com");
+        clearInterval(interval);
+      }
+    }, 50);
+
+    return false;
+  });
+</script>
+</body>
+</html>

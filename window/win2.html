@@ -1,0 +1,37 @@
+<html>
+<head>
+  <title>win2</title>
+</head>
+<body>
+<p id="received-message">I've heard nothing yet</p>
+<script src="../jquery.js"></script>
+
+<script type="text/javascript">
+  window.onload = function() {
+    window.status = 'onload';
+    console.log(window.status);
+  };
+
+  function displayMessage (evt) {
+    var message;
+    if (evt.origin !== "http://www.win.com") {
+      message = "You are not worthy";
+    }
+    else {
+      message = "I got " + evt.data + " from " + evt.origin;
+      console.log(evt.data);
+      console.log($.parseJSON(evt.data));
+    }
+    document.getElementById("received-message").innerHTML = message;
+  }
+
+  if (window.addEventListener) {
+    // For standards-compliant web browsers
+    window.addEventListener("message", displayMessage, false);
+  }
+  else {
+    window.attachEvent("onmessage", displayMessage);
+  }
+</script>
+</body>
+</html>
