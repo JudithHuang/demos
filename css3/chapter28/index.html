@@ -1,0 +1,48 @@
+<!DOCTYPE>
+<html>
+  <head>
+    <head>
+      <title> chapter 28 </title>
+      <style type="text/css">
+        .container {
+          background-color: skyblue;
+          position: relative;
+          border: 1px solid red;
+          outline: 1px solid blue;
+          outline-offset: 2px;
+          resize: both;
+          width: 100px;
+          height: 100px;
+          overflow: auto;
+        }
+
+        .class-common {
+          position: absolute;
+          left: 0;
+          top: 0;
+        }
+
+        .class1 {
+          background-color: rgb(255, 0, 0);
+        }
+
+        .class2 {
+          background-color: rgba(255, 0, 0, .5);
+          left: 100px;
+        }
+
+        .img1 {
+          width: 500px;
+        }
+
+        .img2 {
+          -webkit-filter: grayscale(50%);
+        }
+      </style>
+    </head>
+  </head>
+  <body>
+    <img class="img1" src="5.jpg" />
+    <img class="img1 img2" src="5.jpg" />
+  </body>
+</html>

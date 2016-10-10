@@ -1,0 +1,97 @@
+<!DOCTYPE>
+<html>
+  <head>
+    <title> chapter 27 </title>
+    <meta name="viewport" content="width=600px" />
+    <style type="text/css">
+      .container {
+        margin: 0 auto;
+      }
+
+      .sub1 {
+        background-color: orange;
+        float: left;
+      }
+
+      .content {
+        background-color: limegreen;
+        float: left;
+      }
+
+      .sub2 {
+        background-color: yellow;
+        float: left;
+      }
+
+      @media screen and (min-width: 1000px) {
+        .container {
+          width: 1000px;
+          height: 100%;
+        }
+
+        .sub1 {
+          width: 200px;
+          height: 100%;
+        }
+
+        .content {
+          width: 560px;
+          height: 100%;
+        }
+
+        .sub2 {
+          width: 200px;
+          height: 100%;
+        }
+      }
+
+      @media screen and (min-width: 640px) and (max-width: 999px) {
+        .container {
+          width: 640px;
+        }
+
+        .sub1 {
+          width: 200px;
+          line-height: 300px;
+        }
+
+        .content {
+          width: 420px;
+          line-height: 300px;
+        }
+
+        .sub2 {
+          width: 100%;
+          line-height: 150px;
+        }
+      }
+
+      @media screen and (max-width: 639px) {
+        .sub1 {
+          width: 100%;
+        }
+
+        .container {
+          width: 100%;
+        }
+
+        .sub2 {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="sub1">
+        SUB 1
+      </div>
+      <div class="content">
+        MAIN
+      </div>
+      <div class="sub2">
+        SUB 2
+      </div>
+    </div>
+  </body>
+</html>

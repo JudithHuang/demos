@@ -1,0 +1,59 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <title>chapter 15</title>
+        <style type="text/css">
+            div:first-letter {
+                color: red;
+            }
+
+            /*div:first-line {
+                color: yellow;
+            }*/
+
+            /*div:before {
+                content: "hello, I am before div"
+            }
+
+            div:after {
+                content: "hello, I am after div"
+            }*/
+
+            :root {
+                background-color: #ddd;
+            }
+
+            body {
+                background-color: #eee;
+            }
+
+            :empty {
+                background-color: yellow;
+            }
+
+            div {
+                height: 20px;
+            }
+
+            :target {
+                background-color: yellow;
+            };
+
+            .wrapper {
+                width: 100px;
+            }
+
+            .content {
+                width: calc(100% + 100px);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="content">
+                <div class="left">left</div>
+                <div class="right">right</div>
+            </div>
+        </div>
+    </body>
+</html>
