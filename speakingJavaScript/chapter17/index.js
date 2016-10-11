@@ -301,17 +301,43 @@
 
 // 17.10
 // eg.1
-function Person(name) {
-  this.name = name;
-}
+// function Person(name) {
+//   this.name = name;
+// }
 
-Person.prototype.describe = function() {
-  return 'Person named:' + this.name;
-}
+// Person.prototype.describe = function() {
+//   return 'Person named:' + this.name;
+// }
 
-var jane = new Person('Jane');
-console.log(jane.describe());
+// var jane = new Person('Jane');
+// console.log(jane.describe());
 
 
-// 17.10.1
+// 17.11
+// 17.11.1
 // eg.1
+function Names(data) {
+  if (data) {
+    this.data = data;
+  }
+}
+
+Names.prototype = {
+  constructor: Names,
+  get data() {
+    Object.defineProperty(this, 'data', {
+      value: [],
+      enumerable: true,
+      configurable: false,
+      writable: false
+    });
+
+    return this.data;
+  }
+};
+
+var names = new Names('judith');
+
+names.data = 'sss';
+
+console.log(names.data);
