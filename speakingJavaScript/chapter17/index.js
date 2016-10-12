@@ -316,28 +316,156 @@
 // 17.11
 // 17.11.1
 // eg.1
-function Names(data) {
-  if (data) {
-    this.data = data;
-  }
-}
+// function Names(data) {
+//   if (data) {
+//     this.data = data;
+//   }
+// }
 
-Names.prototype = {
-  constructor: Names,
-  get data() {
-    Object.defineProperty(this, 'data', {
-      value: [],
-      enumerable: true,
-      configurable: false,
-      writable: false
-    });
+// Names.prototype = {
+//   constructor: Names,
+//   get data() {
+//     Object.defineProperty(this, 'data', {
+//       value: [],
+//       enumerable: true,
+//       configurable: false,
+//       writable: false
+//     });
 
-    return this.data;
-  }
-};
+//     return this.data;
+//   }
+// };
 
-var names = new Names('judith');
+// var names = new Names('judith');
 
-names.data = 'sss';
+// names.data = 'sss';
 
-console.log(names.data);
+// console.log(names.data);
+
+
+// 17.13
+// 17.13.1
+// eg.1
+// function Super(prop1, prop2) {
+//   this.prop1 = prop1;
+//   this.prop2 = prop2;
+// }
+
+// function Sub(prop1, prop2, prop3, prop4) {
+//   Super.call(this, prop1, prop2);
+//   this.prop3 = prop3;
+//   this.prop4 = prop4;
+// }
+
+// var sub = new Sub(1, 2, 3, 4);
+// console.log(sub.__proto__.prop1);
+
+// eg.2
+// var animals = [
+//   { name: 'Jane' },
+//   { name: 'Judith' }
+// ];
+
+// for (var i = 0; i < animals.length; i ++) {
+//   (function(i) {
+//     this.print = function() {
+//       console.log('name:', this.name);
+//     };
+//     this.print();
+//   }).call(animals[i], i);
+// }
+
+// console.log(animals);
+
+// 17.13.4
+// eg.1
+// var Super = {
+//   func: function() {
+//     console.log('this is super func...');
+//   }
+// }
+
+// var Sub = {
+//   func: function() {
+//     console.log('this is sub func...');
+//   }
+// }
+
+// Object.setPrototypeOf(Sub, Super);
+
+// Sub.__proto__.func();
+// Sub.func();
+
+
+// 17.13.5
+// eg.1
+// var Super = {
+//   name: 'Super',
+//   func: function() {
+//     console.log('this is super func...', this.name);
+//   }
+// }
+
+// var Sub = {
+//   name: 'Sub',
+//   func: function() {
+//     Sub.__proto__.func.call(this);
+//     console.log('this is sub func...', this.name);
+//   }
+// }
+
+// Object.setPrototypeOf(Sub, Super);
+
+// Sub.__proto__.func();
+// console.log('===========================');
+// Sub.func();
+
+
+// 17.15
+// eg.1
+// function Wine(age) {
+//   this.age = age;
+// }
+
+// Wine.prototype.incAge = function(years) {
+//   this.age += years;
+// };
+
+// var wine = new Wine(10);
+// wine.incAge(4);
+// console.log(wine);
+
+// var jane = { age: 20 };
+// Wine.prototype.incAge.call(jane, 5);
+// console.log(jane);
+
+
+// 17.15.2
+// eg.1
+// var arr1 = [1,2,3];
+// var arr2 = [4,5,6];
+
+// var arr3 = [].push.apply(arr1, arr2);
+// console.log('arr1', arr1);
+// console.log('arr3', arr3);
+
+
+// 17.15.3
+// eg.1
+// var str = 'abc'[1];
+// console.log(str);
+
+
+// 17.16
+// 17.16.1
+// eg.1
+// var proto = { protoProp: 'a' };
+// var obj = { ownProp: 'b' };
+
+// Object.setPrototypeOf(obj, proto);
+
+// for (var key in obj) {
+//   console.log(key);
+// }
+
+// console.log(Object.keys(obj));
