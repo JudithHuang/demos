@@ -22,8 +22,8 @@
 
 // 23.5.5
 // eg.1
-console.profile('test profile...');
-for (var i = 0; i < 100; i ++) {
-  console.log('hello...');
-}
-console.profileEnd();
+// console.profile('test profile...');
+// for (var i = 0; i < 100; i ++) {
+//   console.log('hello...');
+// }
+// console.profileEnd();
