@@ -1,1 +1,68 @@
-index.coffee
+#! /bin/sh
+
+# 2.3
+# eg.1
+# who
+
+
+# 2.5
+# 2.5.2
+# eg.1
+# myvar=hello
+# echo $myvar
+
+# eg.2
+# fullname="Judith Huang"
+# echo $fullname
+
+# eg.3
+# firstname="Judith"
+# lastname="Huang"
+# fullname="$firstname $lastname"
+# echo $fullname
+
+
+#2.5.3
+# eg.1
+# echo hello Judith Huang
+
+# eg.2
+# echo -n "Enter your name:"
+
+
+# 2.5.4
+# eg.1
+# printf "hello, judith huang\n"
+
+
+# 2.5
+# 2.5.2
+# eg.1
+# printf "Enter your new password:"
+# stty -echo
+# read pass < /dev/tty
+# printf "Enter again:"
+# read pass2 < /dev/tty
+# stty echo
+
+
+# 2.5.6
+# eg.1
+# echo $PATH
+
+
+# 2.7
+# eg.1
+# set -x
+# echo 1st echo
+
+# set +x
+# echo 2nd echo
+
+
+# 2.8
+# eg.1
+# locale -a
+
+# eg.2
+# LC_ALL=da locale 0ck LC_TIME
