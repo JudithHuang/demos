@@ -1,0 +1,24 @@
+#! /bin/sh
+# 4.1
+# 4.1.2
+# eg.1
+# sort -t: -k1,1 -u /etc/passwd
+
+
+# 4.2
+# eg.1
+# cat latin-numbers
+# sort latin-numbers | uniq -c
+# sort latin-numbers | uniq -d
+# sort latin-numbers | uniq -u
+
+
+# 4.4
+# eg.1
+# echo This is a test of the emergency broadcast system | wc
+# echo This is a test of the emergency broadcast system | wc -c
+# echo This is a test of the emergency broadcast system | wc -l
+# echo This is a test of the emergency broadcast system | wc -w
+
+# eg.2
+wc /etc/passwd /etc/group

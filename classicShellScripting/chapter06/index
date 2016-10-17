@@ -1,0 +1,24 @@
+#! /bin/sh
+# 6.1
+# 6.1.1
+# eg.1
+# hours_per_day=24
+# readonly hours_per_day
+# echo $hours_per_day
+
+# hours_per_day=25
+# echo $hours_per_day
+
+
+# 6.1.2
+# eg.1
+# reminder="Time to go to the dentist!"
+# sleep 1
+# echo _${reminder}_
+
+
+# 6.1.2.1
+# eg.1
+echo ${name:=judith}
+name=hello
+echo ${name:=judith}

@@ -1,0 +1,13 @@
+#! /bin/sh
+umask 077
+
+PERSON=/tmp/pd.key.person.$$
+OFFICE=/tmp/pd.key.office.$$
+TELEPHONE=/tmp/pd.key.telephone.$$
+USER=/tmp/pd.key.user.$$
+
+# trap "exit 1"
+# trap "rm -f $PERSON $OFFICE $TELEPHONE $USER" EXIT
+rm -R /tmp/pd.*
+
+cat /etc/passwd | awk -F: '{ print $1 ":" $5 }' > $USER

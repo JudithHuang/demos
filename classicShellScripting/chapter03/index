@@ -8,10 +8,10 @@
 # 3.2
 # 3.2.7
 # eg.1
-# find /home/user/resource/demos/classicShellScripting/chapter03/tolstoy -type d -print
-# sed 's;/home/user/resource/demos/classicShellScripting/chapter03/tolstoy/;/home/user/resource/demos/classicShellScripting/chapter03/lt/;'
-# sed 's/^/mkdir /'
-# sh -x
+find /home/user/resource/demos/classicShellScripting/chapter03/tolstoy -type d -print |
+  sed 's;/home/user/resource/demos/classicShellScripting/chapter03/tolstoy/;/home/user/resource/demos/classicShellScripting/chapter03/lt/;' |
+  sed 's/^/mkdir /' |
+  sh -x
 
 # eg.2
 # find tolstoy/ | sed 's;\(/home\)/tolstoy/;\1/lt/;'
@@ -40,4 +40,4 @@
 
 # 3.3.4.4
 # eg.1
-awk -F: '{ print "User", $1, "is really", $5 }' /etc/passwd
+# awk -F: '{ print "User", $1, "is really", $5 }' /etc/passwd
