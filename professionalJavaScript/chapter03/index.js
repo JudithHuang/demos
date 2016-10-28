@@ -14,3 +14,10 @@
 // console.log('2' - '3');
 
 // 3.5.7
+
+
+// 3.6
+// 3.6.5
+for (var elem in null) {
+  console.log(elem);
+}
